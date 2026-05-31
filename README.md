@@ -55,3 +55,10 @@ Suggests improvements
 Then approves & merges into main.
 
 🔄 Step 8 — Keep your code updated
+
+Framework:
+Frontend (React)
+        ↓ HTTP Requests (API calls)
+Backend (Django API)
+        ↓
+Database (PostgreSQL/MySQL/SQLite)
