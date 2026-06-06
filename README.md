@@ -107,3 +107,67 @@ frontend/
 └── README.md
 
 Heroku for deployment?
+
+Scaffolded frontend/backend/database folders
+-------------------------------------------
+
+I added a recommended folder structure and minimal starter files for the frontend, backend, and database.
+
+- Frontend (`frontend/`):
+        - public/
+                - index.html
+        - src/
+                - assets/
+                        - images/
+                        - styles/global.css
+                - components/
+                        - Navbar.jsx
+                        - Footer.jsx
+                - pages/
+                        - Home.jsx
+                - services/
+                        - api.js
+                - hooks/
+                        - useAuth.js
+                - context/
+                        - AuthContext.jsx
+                - App.jsx
+                - main.jsx
+        - package.json
+
+- Backend (`backend/`):
+        - manage.py (placeholder)
+        - requirements.txt
+        - childofgod_api/
+                - settings.py (placeholder)
+                - urls.py
+        - apps/
+                - products/
+                        - models.py
+                        - views.py
+                        - serializers.py
+                        - urls.py
+        - Dockerfile
+
+- Database (`database/`):
+        - postgres/
+                - init.sql (example schema)
+        - docker/
+                - docker-compose.yml
+        - backups/
+        - migrations/
+
+To run the frontend dev server:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+To start the example Postgres service (local Docker):
+
+```bash
+cd database/docker
+docker-compose up -d
+```

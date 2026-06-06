@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: childofgod
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: childofgod
+    volumes:
+      - ../postgres:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+  backend:
+    build: ../../backend
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ../../backend:/app
+    environment:
+      - DJANGO_SECRET_KEY=replace-me
+      - DATABASE_URL=postgres://childofgod:changeme@db:5432/childofgod
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
