@@ -62,3 +62,48 @@ Frontend (React)
 Backend (Django API)
         ↓
 Database (PostgreSQL/MySQL/SQLite)
+
+frontend/
+│
+├── public/
+│   ├── favicon.ico
+│   ├── logo.png
+│   └── images/
+│
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── styles/
+│   │
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   └── Button.jsx
+│   │
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   └── Contact.jsx
+│   │
+│   ├── services/
+│   │   └── api.js
+│   │
+│   ├── hooks/
+│   │   └── useAuth.js
+│   │
+│   ├── context/
+│   │   └── AuthContext.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── .env
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── index.html
+└── README.md
+
+Heroku for deployment?
