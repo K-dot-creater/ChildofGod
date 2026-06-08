@@ -255,9 +255,15 @@ npm install
 
 **What happens:** A `node_modules` folder is created (~500MB) with all dependencies.
 
-Once done, start the dev server:
+Once done, create a local frontend env file and start the dev server:
 
 ```bash
+# Copy the example env file into the frontend folder first
+# PowerShell or cmd:
+copy .env.example .env
+# Git Bash or macOS/Linux:
+# cp .env.example .env
+
 # Start the Vite development server
 npm run dev
 ```
